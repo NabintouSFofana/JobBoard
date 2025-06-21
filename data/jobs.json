@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "title": "Frontend Developer",
+    "location": "Remote",
+    "type": "Full-time",
+    "company": "TechFlow",
+    "description": "Build stunning user interfaces using modern JavaScript frameworks."
+  },
+  {
+    "id": 2,
+    "title": "UI/UX Designer",
+    "location": "New York",
+    "type": "Contract",
+    "company": "DesignPro",
+    "description": "Design seamless experiences for web and mobile platforms."
+  },
+  {
+    "id": 3,
+    "title": "React Developer",
+    "location": "London",
+    "type": "Part-time",
+    "company": "Startuply",
+    "description": "Work on interactive components using React and Tailwind CSS."
+  },
+  {
+    "id": 4,
+    "title": "Full Stack Developer",
+    "location": "Remote",
+    "type": "Full-time",
+    "company": "CodeSprint",
+    "description": "Develop robust frontend and backend features for SaaS applications."
+  },
+  {
+    "id": 5,
+    "title": "Junior Frontend Developer",
+    "location": "New York",
+    "type": "Internship",
+    "company": "BrightTech",
+    "description": "Support UI development and learn from senior frontend engineers."
+  },
+  {
+    "id": 3,
+    "title": "React Developer",
+    "location": "London",
+    "type": "Part-time",
+    "company": "Startuply",
+    "description": "Work on interactive components using React and Tailwind CSS."
+  },
+  {
+    "id": 4,
+    "title": "Full Stack Developer",
+    "location": "Remote",
+    "type": "Full-time",
+    "company": "CodeSprint",
+    "description": "Develop robust frontend and backend features for SaaS applications."
+  },
+  {
+    "id": 5,
+    "title": "Junior Frontend Developer",
+    "location": "New York",
+    "type": "Internship",
+    "company": "BrightTech",
+    "description": "Support UI development and learn from senior frontend engineers."
+  }
+]

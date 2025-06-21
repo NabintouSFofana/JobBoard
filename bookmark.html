@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JobBoard | Bookmarked Jobs</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="site-name">JobBoard</a>
+  <nav>
+    <ul>
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="bookmark.html" class="nav-link">🔖Bookmarks</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+  <main class="container">
+    <h2 style="margin-bottom:1.5rem;font-size:1.5rem;font-weight:700;">Your Bookmarked Jobs</h2>
+    <section id="bookmarkList" class="job-list">
+      <!-- Bookmarked cards injected here -->
+    </section>
+    <p id="emptyMsg" class="error-message" style="display:none;">No bookmarks yet. Go add some jobs!</p>
+  </main>
+
+
+  <footer>
+  © 2025 <strong>JobBoard</strong>. Built with <span>❤️</span> by Nabintou Fofana —
+  <a href="#">Front-End Developer Portfolio Project</a>
+  </footer>
+
+ <script src="js/app.js" defer></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const list = document.getElementById('bookmarkList');
+      const emptyMsg = document.getElementById('emptyMsg');
+      const bookmarks = JSON.parse(localStorage.getItem('bookmarkedJobs')) || [];
+
+      if (bookmarks.length === 0) {
+        emptyMsg.style.display = 'block';
+        return;
+      }
+
+      bookmarks.forEach((job, index) => {
+        const card = document.createElement('div');
+        card.className = 'job-card';
+        card.style.animationDelay = `${index * 100}ms`;
+        card.innerHTML = `
+          <h3>${job.title}</h3>
+          <p class="meta">${job.company} — ${job.location}</p>
+          <p class="desc">${job.description}</p>
+          <span class="badge">${job.type}</span>
+          <button class="remove-bookmark-btn" onclick="removeBookmark(${job.id})">Remove Bookmark</button>
+        `;
+        list.appendChild(card);
+      });
+    });
+
+    function removeBookmark(id) {
+      let bookmarks = JSON.parse(localStorage.getItem('bookmarkedJobs')) || [];
+      bookmarks = bookmarks.filter(b => b.id !== id);
+      localStorage.setItem('bookmarkedJobs', JSON.stringify(bookmarks));
+      location.reload();
+    }
+  </script>
+</body>
+</html>

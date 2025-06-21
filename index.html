@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JobBoard</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-gray-100 text-gray-900">
+  <header>
+ <a href="index.html" class="site-name">JobBoard</a>
+  <nav>
+    <ul>
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="bookmark.html" class="nav-link">🔖Bookmarks</a></li>
+    </ul>
+  </nav>
+</header>
+  
+  <main class="max-w-5xl mx-auto py-8 px-4">
+    <div class="mb-6">
+      <h2 class="text-xl font-semibold mb-2">Search for Jobs</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <input type="text" placeholder="Search title..." class="p-2 border rounded" id="searchTitle">
+        <select id="locationFilter" class="p-2 border rounded">
+          <option value="">All Locations</option>
+          <option value="Remote">Remote</option>
+          <option value="New York">New York</option>
+          <option value="London">London</option>
+        </select>
+        <select id="typeFilter" class="p-2 border rounded">
+          <option value="">All Types</option>
+          <option value="Full-time">Full-time</option>
+          <option value="Part-time">Part-time</option>
+          <option value="Contract">Contract</option>
+        </select>
+      </div>
+    </div>
+
+    <section id="jobList" class="grid gap-6 md:grid-cols-2">
+      <!-- Jobs will be injected here by JS -->
+    </section>
+  </main>
+
+    <footer>
+  © 2025 <strong>JobBoard</strong>. Built with <span>❤️</span> by Nabintou Fofana —
+  <a href="#">Front-End Developer Portfolio Project</a>
+  </footer>
+
+  <script src="js/app.js" defer></script>
+
+</body>
+</html>

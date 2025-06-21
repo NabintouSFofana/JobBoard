@@ -3,7 +3,8 @@
 A sleek, responsive job-listing web app that lets users search, filter and **bookmark** jobs with a single click.  
 Built as part of my front-end portfolio to demonstrate modern UI skills, graceful animations, and clean code.
 
-assets/jobBoard.png
+![jobBoard](https://github.com/user-attachments/assets/dde78b6a-ab16-4ba1-96d7-0cdf7d142974)
+
 
 ---
 
@@ -19,7 +20,7 @@ assets/jobBoard.png
 ---
 
 ## 🖥 Demo
-Live demo: **<https://YOUR-USERNAME.github.io/JobBoard>**
+Live demo: **<https://NabintouSFofana.github.io/JobBoard>**
 
 ---
 
@@ -58,4 +59,5 @@ http://localhost:3000
 ```
 
 ## Screenshots
-assets/jobBoard.png
+![jobBoard](https://github.com/user-attachments/assets/e54b5d38-0377-4d3f-b552-031c925dab2b)
+

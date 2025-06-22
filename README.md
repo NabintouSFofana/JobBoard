@@ -57,7 +57,3 @@ http://localhost:3000
  ┗ 📁 data
    ┗ 📄 jobs.json
 ```
-
-## Screenshots
-![jobBoard](https://github.com/user-attachments/assets/e54b5d38-0377-4d3f-b552-031c925dab2b)
-

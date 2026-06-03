@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "title": "Frontend Developer",
+    "company": "TechFlow",
+    "location": "Remote",
+    "type": "Full-time",
+    "salary": "$75K — $105K",
+    "posted": "2 days ago",
+    "description": "Build a design-led component library with our small product team. Strong CSS instincts and an eye for typography matter more than five years of React on your résumé."
+  },
+  {
+    "id": 2,
+    "title": "UI/UX Designer",
+    "company": "DesignPro",
+    "location": "New York",
+    "type": "Contract",
+    "salary": "$80 — $110 / hr",
+    "posted": "4 days ago",
+    "description": "Design clear, calm interfaces for a finance product nobody finds calm. Six-month engagement, possible to convert."
+  },
+  {
+    "id": 3,
+    "title": "React Developer",
+    "company": "Startuply",
+    "location": "London",
+    "type": "Part-time",
+    "salary": "£45K pro rata",
+    "posted": "1 week ago",
+    "description": "Ship interactive marketing components alongside a senior engineer. Twenty hours a week, fully flexible."
+  },
+  {
+    "id": 4,
+    "title": "Full Stack Developer",
+    "company": "CodeSprint",
+    "location": "Remote",
+    "type": "Full-time",
+    "salary": "$110K — $140K",
+    "posted": "1 week ago",
+    "description": "Own a slice of our SaaS platform end-to-end. Typescript, Node, Postgres. We don't write yaml until we have to."
+  },
+  {
+    "id": 5,
+    "title": "Junior Frontend Developer",
+    "company": "BrightTech",
+    "location": "New York",
+    "type": "Internship",
+    "salary": "$28 — $34 / hr",
+    "posted": "2 weeks ago",
+    "description": "Twelve-week structured internship with a real mentor. You'll ship to production by week three."
+  },
+  {
+    "id": 6,
+    "title": "Backend Engineer",
+    "company": "Mason & Co.",
+    "location": "Remote",
+    "type": "Full-time",
+    "salary": "$120K — $155K",
+    "posted": "3 days ago",
+    "description": "Quiet team building infrastructure for a B2B reporting product. Go, Postgres, light Kafka. Detail-oriented, deliberate."
+  },
+  {
+    "id": 7,
+    "title": "Product Designer",
+    "company": "Quiet Type",
+    "location": "London",
+    "type": "Full-time",
+    "salary": "£60K — £80K",
+    "posted": "5 days ago",
+    "description": "Senior designer for a publishing tool. You care about line-height the way most people care about salary."
+  },
+  {
+    "id": 8,
+    "title": "QA Engineer",
+    "company": "CodeSprint",
+    "location": "Remote",
+    "type": "Contract",
+    "salary": "$65 — $85 / hr",
+    "posted": "6 days ago",
+    "description": "Build out Playwright coverage across three product surfaces. We have flaky tests; you'll teach us to delete them honestly."
+  }
+]

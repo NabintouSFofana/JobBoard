@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!--
+  JobBoard · Nabintou S. Fofana · 2025
+  MIT-licensed code · https://github.com/NabintouSFofana/JobBoard
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#F2ECE0" />
+  <meta name="description" content="JobBoard — your saved listings." />
+  <title>JobBoard · saved listings</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23F2ECE0'/><path d='M8 10 h16 v14 h-16z M11 10 v-2 a3 3 0 0 1 3 -3 h4 a3 3 0 0 1 3 3 v2' stroke='%23B6411C' stroke-width='2' fill='none' stroke-linejoin='round'/></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..900,0..100,0..1;1,9..144,300..900,0..100,0..1&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body data-page="bookmarks">
+
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="masthead">
+    <div class="masthead-row">
+      <a href="index.html" class="brand" aria-label="JobBoard home">
+        <span class="brand-mark" aria-hidden="true">N°</span>
+        <span class="brand-name">JobBoard</span>
+      </a>
+      <nav class="masthead-nav" aria-label="Primary">
+        <a href="index.html">Listings</a>
+        <a href="bookmark.html" aria-current="page" id="navBookmarks">
+          Saved <span id="navBookmarkCount" class="nav-count">0</span>
+        </a>
+      </nav>
+    </div>
+    <div class="masthead-meta">
+      <span class="mono">Vol. 01 · 2026 · Saved listings</span>
+      <span id="resultsCount" class="mono">— saved</span>
+    </div>
+  </header>
+
+  <main class="page" id="top">
+    <section class="hero">
+      <h1 class="hero-title">
+        <span class="line">The ones</span>
+        <span class="line"><em>worth</em> a second look.</span>
+      </h1>
+      <p class="hero-blurb">
+        Listings you've saved live here. They're stored in <em>this browser only</em> — clear your browser data and the list resets.
+      </p>
+    </section>
+
+    <section class="listings" aria-labelledby="savedHeading">
+      <div class="section-rule">
+        <h2 id="savedHeading" class="section-rule-label mono">Saved</h2>
+        <button type="button" id="clearAllBtn" class="link-btn" hidden>Clear all saved…</button>
+      </div>
+
+      <ol id="bookmarkList" class="job-list" role="list"></ol>
+
+      <p id="emptyState" class="empty-state" hidden>
+        No saved listings yet.
+        <a href="index.html" class="empty-link">Browse openings&nbsp;→</a>
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span class="mono">© 2026 — JobBoard · by <a href="https://github.com/NabintouSFofana" target="_blank" rel="noopener">Nabintou Fofana</a></span>
+    <a href="#top" class="mono">Back to top ↑</a>
+  </footer>
+
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden>
+    <span id="toastText" class="toast-text"></span>
+  </div>
+
+  <script src="js/app.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<!--
+  JobBoard · Nabintou S. Fofana · 2025
+  MIT-licensed code · https://github.com/NabintouSFofana/JobBoard
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#F2ECE0" />
+  <meta name="description" content="JobBoard — a small, fast, editorial-style job listing. Vanilla HTML, CSS, JS. Search, filter, save." />
+  <title>JobBoard · open positions</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23F2ECE0'/><path d='M8 10 h16 v14 h-16z M11 10 v-2 a3 3 0 0 1 3 -3 h4 a3 3 0 0 1 3 3 v2' stroke='%23B6411C' stroke-width='2' fill='none' stroke-linejoin='round'/></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..900,0..100,0..1;1,9..144,300..900,0..100,0..1&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- ─────────── MASTHEAD ─────────── -->
+  <header class="masthead">
+    <div class="masthead-row">
+      <a href="index.html" class="brand" aria-label="JobBoard home">
+        <span class="brand-mark" aria-hidden="true">N°</span>
+        <span class="brand-name">JobBoard</span>
+      </a>
+      <nav class="masthead-nav" aria-label="Primary">
+        <a href="index.html" aria-current="page">Listings</a>
+        <a href="bookmark.html" id="navBookmarks">
+          Saved <span id="navBookmarkCount" class="nav-count">0</span>
+        </a>
+      </nav>
+    </div>
+    <div class="masthead-meta">
+      <span class="mono">Vol. 01 · 2026 · Open positions</span>
+      <span id="resultsCount" class="mono">— listings</span>
+    </div>
+  </header>
+
+  <main class="page" id="top">
+
+    <!-- ─────────── HERO ─────────── -->
+    <section class="hero">
+      <h1 class="hero-title">
+        <span class="line"><em>Now</em> hiring,</span>
+        <span class="line">remote &amp; on-site.</span>
+      </h1>
+      <p class="hero-blurb">
+        A small, fast job listing. Search by title, filter by location or type, save the ones worth a second look. No accounts, no tracking — saved listings live in your browser only.
+      </p>
+    </section>
+
+    <!-- ─────────── FILTER RAIL ─────────── -->
+    <section class="filters" aria-label="Filters">
+      <div class="filter-grid">
+        <div class="field field-search">
+          <label class="mono" for="searchTitle">Search</label>
+          <input type="search" id="searchTitle" placeholder="e.g. frontend, designer…" autocomplete="off" />
+        </div>
+        <div class="field">
+          <label class="mono" for="locationFilter">Location</label>
+          <select id="locationFilter">
+            <option value="">All locations</option>
+          </select>
+        </div>
+        <div class="field">
+          <label class="mono" for="typeFilter">Type</label>
+          <select id="typeFilter">
+            <option value="">All types</option>
+          </select>
+        </div>
+        <button type="button" id="clearFilters" class="link-btn clear-link">Clear filters</button>
+      </div>
+    </section>
+
+    <!-- ─────────── LISTINGS ─────────── -->
+    <section class="listings" aria-labelledby="listingsHeading">
+      <div class="section-rule">
+        <h2 id="listingsHeading" class="section-rule-label mono">The list</h2>
+      </div>
+
+      <ol id="jobList" class="job-list" role="list"></ol>
+
+      <p id="emptyState" class="empty-state" hidden>
+        Nothing matches those filters. Try clearing them.
+      </p>
+      <p id="errorState" class="error-state" hidden>
+        Couldn't load the listings. Something went wrong.
+      </p>
+    </section>
+
+  </main>
+
+  <!-- ─────────── FOOTER ─────────── -->
+  <footer class="site-footer">
+    <span class="mono">© 2026 — JobBoard · by <a href="https://github.com/NabintouSFofana" target="_blank" rel="noopener">Nabintou Fofana</a></span>
+    <a href="#top" class="mono">Back to top ↑</a>
+  </footer>
+
+  <!-- ─────────── TOAST ─────────── -->
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden>
+    <span id="toastText" class="toast-text"></span>
+  </div>
+
+  <!-- ─────────── DATA ───────────
+       Jobs are inlined here so the app works from a plain file:// open
+       (no server needed). The JSON file at data/jobs.json is also kept
+       for documentation / future REST endpoint use.
+  -->
+  <script id="jobsData" type="application/json">
+[
+  {
+    "id": 1,
+    "title": "Frontend Developer",
+    "company": "TechFlow",
+    "location": "Remote",
+    "type": "Full-time",
+    "salary": "$75K — $105K",
+    "posted": "2 days ago",
+    "description": "Build a design-led component library with our small product team. Strong CSS instincts and an eye for typography matter more than five years of React on your résumé."
+  },
+  {
+    "id": 2,
+    "title": "UI/UX Designer",
+    "company": "DesignPro",
+    "location": "New York",
+    "type": "Contract",
+    "salary": "$80 — $110 / hr",
+    "posted": "4 days ago",
+    "description": "Design clear, calm interfaces for a finance product nobody finds calm. Six-month engagement, possible to convert."
+  },
+  {
+    "id": 3,
+    "title": "React Developer",
+    "company": "Startuply",
+    "location": "London",
+    "type": "Part-time",
+    "salary": "£45K pro rata",
+    "posted": "1 week ago",
+    "description": "Ship interactive marketing components alongside a senior engineer. Twenty hours a week, fully flexible."
+  },
+  {
+    "id": 4,
+    "title": "Full Stack Developer",
+    "company": "CodeSprint",
+    "location": "Remote",
+    "type": "Full-time",
+    "salary": "$110K — $140K",
+    "posted": "1 week ago",
+    "description": "Own a slice of our SaaS platform end-to-end. Typescript, Node, Postgres. We don't write yaml until we have to."
+  },
+  {
+    "id": 5,
+    "title": "Junior Frontend Developer",
+    "company": "BrightTech",
+    "location": "New York",
+    "type": "Internship",
+    "salary": "$28 — $34 / hr",
+    "posted": "2 weeks ago",
+    "description": "Twelve-week structured internship with a real mentor. You'll ship to production by week three."
+  },
+  {
+    "id": 6,
+    "title": "Backend Engineer",
+    "company": "Mason & Co.",
+    "location": "Remote",
+    "type": "Full-time",
+    "salary": "$120K — $155K",
+    "posted": "3 days ago",
+    "description": "Quiet team building infrastructure for a B2B reporting product. Go, Postgres, light Kafka. Detail-oriented, deliberate."
+  },
+  {
+    "id": 7,
+    "title": "Product Designer",
+    "company": "Quiet Type",
+    "location": "London",
+    "type": "Full-time",
+    "salary": "£60K — £80K",
+    "posted": "5 days ago",
+    "description": "Senior designer for a publishing tool. You care about line-height the way most people care about salary."
+  },
+  {
+    "id": 8,
+    "title": "QA Engineer",
+    "company": "CodeSprint",
+    "location": "Remote",
+    "type": "Contract",
+    "salary": "$65 — $85 / hr",
+    "posted": "6 days ago",
+    "description": "Build out Playwright coverage across three product surfaces. We have flaky tests; you'll teach us to delete them honestly."
+  }
+]
+  </script>
+
+  <script src="js/app.js" defer></script>
+</body>
+</html>

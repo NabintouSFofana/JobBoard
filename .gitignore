@@ -1,0 +1,46 @@
+# ─── OS junk ─────────────────────────────────────────────────────────
+# macOS
+.DS_Store
+.AppleDouble
+._*
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# ─── Editor / IDE files ──────────────────────────────────────────────
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+*~
+
+# ─── Logs and temp ───────────────────────────────────────────────────
+*.log
+*.tmp
+*.bak
+*.cache
+
+# ─── Local-only experiments ──────────────────────────────────────────
+# Anything starting with _draft, _scratch, or _local stays on my
+# machine. Useful for trying new layouts without pushing them.
+_draft*
+_scratch*
+_local*
+
+# ─── If I ever add a build step (currently none) ─────────────────────
+node_modules/
+dist/
+build/
+.cache/
+.parcel-cache/
+
+# ─── Secrets ─────────────────────────────────────────────────────────
+.env
+.env.local
+secrets.json

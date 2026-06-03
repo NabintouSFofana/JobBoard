@@ -4,7 +4,8 @@ A small job listing site that reads like a newspaper classifieds page instead of
 
 **Live:** https://nabintousfofana.github.io/JobBoard/
 
-![JobBoard screenshot](assets/jobBoard.png)
+<img width="1090" height="862" alt="image" src="https://github.com/user-attachments/assets/f82df622-c5d4-4b85-95be-c67b9043b684" />
+
 
 ## What it does
 
